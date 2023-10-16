@@ -32,7 +32,7 @@ const CustomButton = () => {
         <h2 className="text-2xl font-semibold">Contact Us</h2>
         <p>Enter your email and name to hear from us.</p>
 
-        <form className="flex flex-col">
+        <form onSubmit={handleSubmit} className="flex flex-col">
           <input
             type="text"
             placeholder="Enter your Name"
@@ -47,10 +47,7 @@ const CustomButton = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <button
-            onClick={handleSubmit}
-            className="w-44 h-16 self-center rounded-full bg-white shadow-2xl"
-          >
+          <button className="w-44 h-16 self-center rounded-full bg-white shadow-2xl">
             <span className="font-bold">Contact Us</span>
           </button>
         </form>

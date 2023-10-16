@@ -6,21 +6,13 @@ import CustomButton from "./CustomButton";
 const Header = () => {
   return (
     <div>
-      <div className="bg-[#9858FF] px-24 pt-6">
+      <div className="bg-[#9858FF] px-4 sm:px-24 pt-6">
         <nav className="p-4 rounded-full border-2 border-white">
-          <div className="container mx-auto flex justify-between items-center">
-            <div className="flex items-center">
-              <div className="rounded-full h-12 w-12 flex items-center justify-center">
-                <img
-                  src={vector}
-                  alt="Logo"
-                  className="lg:h-10 md:h-1 sm:h-1 lg:w-10"
-                />
-                <img
-                  src={logo}
-                  alt="Logo"
-                  className="lg:h-10 md:h-1 sm:h-1 lg:w-10"
-                />
+          <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
+            <div className="flex items-center mb-4 sm:mb-0">
+              <div className="rounded-full h-16 w-16 sm:h-20 sm:w-20 flex items-center justify-center p-2">
+                <img src={vector} alt="Vector" className="w-4/5" />
+                <img src={logo} alt="Alpha" className="w-4/5 sm:w-24" />
               </div>
             </div>
             <div className="flex-grow text-center">
@@ -31,9 +23,7 @@ const Header = () => {
                 Services
               </a>
             </div>
-            <div>
-              <CustomButton />
-            </div>
+            <CustomButton />
           </div>
         </nav>
       </div>
